@@ -2,6 +2,12 @@ button {
   background-color: var(--primary-color) !important;
 }
 
+button:hover {
+  font-size: 0.9rem;
+  background-color: var(--medium-primary-color) !important;
+}
+
+
 .pluggin-container{
   background-color: bisque;
   padding: 1rem;
