@@ -1,0 +1,41 @@
+@use '@carbon/react';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border-radius: 20px !important;
+  padding: 0.5rem 2rem !important;
+  min-height: 0 !important;
+  font-weight: 600 !important;
+}
+
+:root{
+  --primary-color: #CD832A;
+  --light-primary-color: #FDF5EE;
+
+  --secondary-color: #12544A;
+  --light-secondary-color: #E2EAE9;
+
+  --font-color: #07282F;
+}
