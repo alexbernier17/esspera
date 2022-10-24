@@ -1,0 +1,91 @@
+.assos-page-container{
+  padding-top: 6rem;
+
+}
+
+.assos-page-header {
+  background: #eaf4ea;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6rem;
+  width: 100vw;
+  padding: 0 5rem;
+
+  // height: 5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  gap: 2rem;
+
+  .assos-page-logo{
+    width: 5em;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  svg{
+    border-radius: 50%;
+    fill: #cbffa3;
+    background: #19572b;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+  }
+  h1 {
+    font-weight: 500;
+    color: #19572b;
+  }
+}
+
+.assos-page-body {
+  gap: 2rem;
+
+  .assos-page-variables{
+    gap: 0.5rem;
+    text-align: justify;
+  }
+}
+
+
+.reco-page-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  img{
+    position: absolute;
+    top: 1rem;
+    right: 10rem;
+  }
+
+  button{
+    background-color: var(--secondary-color) !important;
+    height: 3rem;
+  }
+
+  #print-btn{
+    display: flex;
+    justify-content: end;
+
+  }
+}
+
+.seed-modal{
+  justify-content: end;
+
+  .cds--modal-close{
+    background-color: inherit !important;
+  }
+
+  .cds--modal-container--lg{
+    max-height: 100vh;
+    height: 100vh;
+    width: 70%;
+  }
+
+  .modal-back-btn{
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+  }  
+}
