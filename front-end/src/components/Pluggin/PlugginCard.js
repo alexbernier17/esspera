@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ResearchCard from "../card/ResearchCard"
 import { useHistory } from 'react-router-dom';
 
@@ -10,9 +10,32 @@ import plugginLogo from "../../Images/plugginLogo.svg";
 function PlugginCard(props) {
 
   let history = useHistory();
+  const [lat, setLat] = useState("")
+  const [long, setLong] = useState("")
+  const [crop, setCrop] = useState("")
+
   const onApply =()=> {
-    console.log("apply");
-    history.push("/recopage");
+    // history.push("/recopage");
+    const search = {"lat": lat, "long": long, "crop": crop};
+
+    history.push({
+      pathname: '/recopage',
+      state: { search: search }
+    });
+    console.log("search",search);
+  }
+
+  const setInput = (input, type) => {
+    if(type==="lat") {
+      setLat(input);
+      console.log("lat", input)
+    } else if(type==="long"){
+      setLong(input);
+      console.log('long', input)
+    } else if(type==="crop"){
+      setCrop(input);
+      console.log('crop', input)
+    }
   }
 
   return (
@@ -25,8 +48,8 @@ function PlugginCard(props) {
           </div>
         </header>
         <div>
-          <ResearchCard view={props.view}/>
-        </div>
+          <ResearchCard view={props.view} onSetInput={setInput}/>
+        </div>  
         <div className="pluggin-btn d-flex">
           <Button onClick={e => {onApply()}}>
             Apply

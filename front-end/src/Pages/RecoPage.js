@@ -1,16 +1,14 @@
 import React, {useRef} from "react";
 import { Button } from '@carbon/react';
 import { useReactToPrint } from 'react-to-print';
+import { useLocation } from "react-router-dom";
 
 import "./Pages.scss"
 import Reco from "../components/Reco";
 
 const RecoPage = () => {
-  const dummyData = {
-    "lat": "123",
-    "long": "456",
-    "crop": "Oat",
-  }
+  const location = useLocation();
+  const search = location.state.search
 
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -19,19 +17,7 @@ const RecoPage = () => {
 
   return(
     <div className="reco-page-container">
-      {/* <img id="solution-logo" src={plugginLogo} alt="solution logo" />
-      <h2>Your custom seed recommendation</h2>
-      <div className="reco-page-recap d-flex">
-        <ResearchCard view="recoPage" searchParams={dummyData}/>
-        <div>
-          <Button onClick={e=> {history.push("/")}}>Modify</Button>
-        </div>
-      </div>
-      <div className="reco-page-results">
-        <div> Predictive values</div>
-        <div>seeds cards</div>
-      </div> */}
-      <Reco ref={componentRef} searchParams={dummyData} />
+      <Reco ref={componentRef} searchParams={search} />
       <div id="print-btn">
         <Button onClick={handlePrint}>Print</Button>
       </div>

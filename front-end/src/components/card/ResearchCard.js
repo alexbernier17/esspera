@@ -20,12 +20,18 @@ function ResearchCard(props) {
                 id="lat"
                 invalidText="A valid value is required"
                 placeholder="Enter latitude"
+                onChange={e => {
+                  props.onSetInput(e.target.value, "lat")
+                }}
               />
               <TextInput
                 className="research-input"
                 id="long"
                 invalidText="A valid value is required"
                 placeholder="Enter longitude"
+                onChange={e => {
+                  props.onSetInput(e.target.value, "long")
+                }}
               />
             </div>
       
@@ -61,6 +67,9 @@ function ResearchCard(props) {
               id="carbon-dropdown-example"
               items={items}
               label="Select crop"
+              onChange={e => {
+                props.onSetInput(e.selectedItem, "crop")
+              }}
             />
           </div>
         </div>

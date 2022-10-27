@@ -10,13 +10,7 @@ import "./Cards.scss"
 
 const Reco = React.forwardRef((props, ref) => {
   let history = useHistory();
-
-  const dummyData = {
-    "lat": "123",
-    "long": "456",
-    "crop": "Oat",
-  }
-
+  
   const dummySeeds = {
     0: {    name: "seed1",
     yield: "459",
