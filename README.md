@@ -6,10 +6,19 @@
 ## Short description
 
 ### What's the problem?
+**Climate change is one of the major challenges of the 21the century**. Introducing further **unpredictability in food security**, directly impacting the performance of various seeds for the next growing seasons, making our **farmers’s crops decision even riskier**.
+
+To remain sustainable, **farming must adapt quickly** to the changing conditions of our world.
 
 ### How can technology help?
+**Leveraging AI and model training**, we beleive we can - all together - provide many solutions for a **more resilient local agriculture**, leading through a **global improvement of food security**.
 
 ### The idea
+ESSPERA was imagined to response to the big issue of food security from its roots. 
+The idea is to **provide farmers the best seed recommendation**, thanks to agro associations' and governemental **seed trials results**. 
+
+Helping them to make better decision with confidence to grow more resilient, we **ensure a better local food security**.
+![What is ESSPERA](https://user-images.githubusercontent.com/65171375/198662592-f1c8608e-04fb-462c-986b-edebb51cfe13.png)
 
 
 ## Demo video
