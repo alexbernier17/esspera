@@ -106,5 +106,9 @@ More details here:
 
 
 ## Authors
+- [Julie Saurat](https://github.com/Julie-Saurat)
+- [Ken Lim](https://github.com/kenlim1228)
+- [rekhazim1](https://github.com/rekhazim1)
+- [Sagarshah30894](https://github.com/Sagarshah30894)
 
 ## License
