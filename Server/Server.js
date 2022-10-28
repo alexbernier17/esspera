@@ -8,7 +8,7 @@ const connStr = process.env.CONN_STRING;
 
 const epochMonths = [1598918400000, 1596240000000, 1593561600000, 1590969600000, 1588291200000];
 
-app.get("/precipitation", async (request, response) => {
+app.get("/yield", async (request, response) => {
   let modelValues = [];
   let lon = request.query.lon;
   let lat = request.query.lat;
