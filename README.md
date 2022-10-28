@@ -24,7 +24,7 @@ Helping them to make better decision with confidence to grow more resilient, we 
 ## Demo video
 
 ## The architecture
-###Test/Dev Architecture (Existing):
+### Test/Dev Architecture (Existing):
 ![ESSPERA Solution Architecture_existing](https://user-images.githubusercontent.com/65171375/198745641-5ad19c36-a26d-401a-a352-2abd926fe616.png)
 1. Web Application: Farmer can give data and access the dashboard to get the seed 
 recommendation
@@ -37,7 +37,7 @@ recommendation
 8. Jupyter Notebook: Add, Clean and process soil, Seed and weather CSVs 
 9. IBM Environmental Intelligence suit: Get the weather data 
 
-###Production Architecture (Future):
+### Production Architecture (Future):
 ![ESSPERA Solution Architecture_futur](https://user-images.githubusercontent.com/65171375/198745722-92e947f5-b0fd-4436-9e5d-b9dad6fdcd21.png)
 
 PDF version:
