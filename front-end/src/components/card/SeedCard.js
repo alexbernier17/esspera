@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import { Sprout, StarFilled } from '@carbon/icons-react';
+import { Sprout, Building } from '@carbon/icons-react';
 
 function SeedCard(props) {
   const seedDetails = props.seedInfo;
@@ -13,20 +13,27 @@ function SeedCard(props) {
         <div onClick={e=> {props.onOpenSeedModal(seedDetails)}}>
           <div className="seed-card-rank d-flex">{props.seedRanking}</div>
           <div className="seed-card-details">
-            <div>Seed name</div>
+            <div className="bold">{seedDetails.name}</div>
             <div className="seed-card-details-container d-flex">
-              <div className="seed-card-detail d-flex">
-                <div className="seed-card-detail-icon">
-                  {/* <Add size="24" /> */}
-                  <Sprout />
+              <div className="seed-card-detail d-flex-column">
+                <div className="seed-card-title d-flex">
+                  <div className="seed-card-detail-icon">
+                    {/* <Add size="24" /> */}
+                    <Sprout />
+                  </div>
+                  <div className="bold">Yield</div>
                 </div>
-                <div className="seed-card-detail-description">xx%</div>
+                <div className="seed-card-detail-description">{seedDetails.yield}</div>
               </div>
-              <div className="seed-card-detail d-flex">
-                <div className="seed-card-detail-icon">
-                  <StarFilled />
+              <div className="seed-card-detail d-flex-column">
+                <div className="seed-card-title d-flex">
+                  <div className="seed-card-detail-icon">
+                    <Building />
+                  </div>
+                  <div className="bold">Company</div>
                 </div>
-                <div className="seed-card-detail-description">yy%</div>
+
+                <div className="seed-card-detail-description">{seedDetails.company}</div>
               </div>
             </div>
           </div>
