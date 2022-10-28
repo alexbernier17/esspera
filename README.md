@@ -24,6 +24,7 @@ Helping them to make better decision with confidence to grow more resilient, we 
 ## Demo video
 
 ## The architecture
+[ESSPERA Solution Architecture.pdf](https://github.com/Julie-Saurat/perma-challenge/files/9892291/ESSPERA.Solution.Architecture.pdf)
 
 ## Long description
 
