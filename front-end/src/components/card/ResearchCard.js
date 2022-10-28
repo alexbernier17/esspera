@@ -1,16 +1,15 @@
 import React from "react";
 
-import { TextInput, Select, SelectItem, Dropdown } from '@carbon/react';
+import { TextInput, Select, SelectItem, Dropdown } from "@carbon/react";
 
-const items = ["Corn", "Soybean", "Rice", "Wheat", "Nut"];
+const items = ["Early Maturity Corn", "Soybean", "Rice", "Wheat", "Nut"];
 
 function ResearchCard(props) {
-
-  const searchParams = props.searchParams
+  const searchParams = props.searchParams;
 
   return (
     <>
-      {props.view === "assosPage" &&
+      {props.view === "assosPage" && (
         <div className="research-card-container">
           <div className="research-card-element d-flex-column">
             Location:
@@ -20,8 +19,8 @@ function ResearchCard(props) {
                 id="lat"
                 invalidText="A valid value is required"
                 placeholder="Enter latitude"
-                onChange={e => {
-                  props.onSetInput(e.target.value, "lat")
+                onChange={(e) => {
+                  props.onSetInput(e.target.value, "lat");
                 }}
               />
               <TextInput
@@ -29,12 +28,11 @@ function ResearchCard(props) {
                 id="long"
                 invalidText="A valid value is required"
                 placeholder="Enter longitude"
-                onChange={e => {
-                  props.onSetInput(e.target.value, "long")
+                onChange={(e) => {
+                  props.onSetInput(e.target.value, "long");
                 }}
               />
             </div>
-      
           </div>
           <div className="research-card-element d-flex-column">
             Crop type:
@@ -44,50 +42,30 @@ function ResearchCard(props) {
               id="carbon-dropdown-example"
               items={items}
               label="Select crop"
-              onChange={e => {
-                props.onSetInput(e.selectedItem, "crop")
+              onChange={(e) => {
+                props.onSetInput(e.selectedItem, "crop");
               }}
             />
           </div>
         </div>
-      }
-      {props.view === "recoPage" &&
+      )}
+      {props.view === "recoPage" && (
         <div className="research-card-container research-card-container-reco">
           <div className="research-card-element d-flex">
             Location:
             <div className="element-inputs d-flex">
-              <TextInput
-                className="research-input"
-                id="lat"
-                invalidText="A valid value is required"
-                value={searchParams["lat"]}
-                disabled={true}
-              />
-              <TextInput
-                className="research-input"
-                id="long"
-                invalidText="A valid value is required"
-                value={searchParams["long"]}
-                disabled={true}
-              />
+              <TextInput className="research-input" id="lat" invalidText="A valid value is required" value={searchParams["lat"]} disabled={true} />
+              <TextInput className="research-input" id="long" invalidText="A valid value is required" value={searchParams["long"]} disabled={true} />
             </div>
-      
           </div>
           <div className="research-card-element d-flex">
             Crop:
-            <TextInput
-                className="research-input"
-                id="crop"
-                invalidText="A valid value is required"
-                value={searchParams["crop"]}
-                disabled={true}
-            />
+            <TextInput className="research-input" id="crop" invalidText="A valid value is required" value={searchParams["crop"]} disabled={true} />
           </div>
         </div>
-      }
-
+      )}
     </>
-  )
+  );
 }
 
 export default ResearchCard;

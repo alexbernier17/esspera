@@ -19,7 +19,7 @@ app.get("/yield", async (request, response) => {
     for (let i = 0; i < 5; i++) {
       let temperatureResposne = await apis.getTemperature(epochMonths[i]);
       let temperatureValue = temperatureResposne.data.features[0].properties.value;
-      console.log(temperatureValue);
+      console.log({ temperatureValue });
       modelValues.push(Number(temperatureValue.toFixed(1)));
       console.log("-------------------------------------");
       let t = weatheResponse.data.layers["500"].Precipitationanomalysurface1Month2.dimensions[0].t[i];
@@ -28,7 +28,9 @@ app.get("/yield", async (request, response) => {
       let normalreponse = await apis.getNormal(epochMonths[i]);
       let normalValue = normalreponse.data.features[0].properties.value;
       let modelValue = precipitationValue + normalValue;
-      console.log(modelValue);
+      console.log({ precipitationValue });
+      console.log({ normalValue });
+      console.log({ modelValue });
       modelValues.push(Number(modelValue.toFixed(1)));
       console.log("====================================");
     }
