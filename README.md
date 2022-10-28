@@ -1,7 +1,7 @@
 # perma-challenge
 
 ## Contents
-
+[Short description](https://github.com/Julie-Saurat/perma-challenge#short-description)
 
 ## Short description
 
@@ -78,7 +78,16 @@ PDF version:
 2. To start the front-end web application, run the command `npm start`. It should automatically start a web browser session, otherwise from a web browser, simply go to http://localhost:3000
 
 ## Built with
+- IBM Cloud Object Storage - Store datasets and the statistic model
+- IBM Watson studio (Jupiter and Notebook) - Create and build the statistic model
+- IBM Watson Machine Learning - Deploy the statistic model
+- React & Carbon Design - Front framework and library 
+- Node JS - Create the backend server
+- Db2 - Store seed data
+- IBM Environmental Intelligence suite & Weather Data API - To access to real time weather
 
+More details here:
+[ESSPERA - technology descrption.docx](https://github.com/Julie-Saurat/perma-challenge/files/9892319/ESSPERA.-.technology.descrption.docx)
 
 ## Contributing
 
