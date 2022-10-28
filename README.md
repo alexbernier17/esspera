@@ -19,6 +19,7 @@
 ## Long description
 
 ## Project roadmap
+![Roadmap](https://user-images.githubusercontent.com/65171375/198656432-5cd834fc-3787-4673-bdb4-ffdd5c99a0af.png)
 
 
 ## Getting started
