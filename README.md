@@ -25,7 +25,7 @@ To remain sustainable, **farming must adapt quickly** to the changing conditions
 
 ### The idea
 ESSPERA was imagined to response to the big issue of food security from its roots. 
-The idea is to **provide farmers the best seed recommendation**, thanks to agro associations' and governmental **seed trials results**. 
+The idea is to **provide farmers the best seed recommendation**, thanks to farmers associations' and governmental **seed trials results**. 
 
 Helping them to make better decision with confidence to grow more resilient, we **ensure a better local food security**.
 ![What is ESSPERA](https://user-images.githubusercontent.com/65171375/198662592-f1c8608e-04fb-462c-986b-edebb51cfe13.png)
