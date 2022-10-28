@@ -4,8 +4,9 @@ import { useHistory } from "react-router";
 
 import ResearchCard from "./card/ResearchCard";
 import SeedCard from "./card/SeedCard";
-import plugginLogo from "../Images/plugginLogo.svg"; 
+import PredictiveDetail from "./card/PredictiveDetail";
 
+import logo from "../Images/logo.svg"; 
 import "./Cards.scss"
 
 const Reco = React.forwardRef((props, ref) => {
@@ -53,6 +54,21 @@ const Reco = React.forwardRef((props, ref) => {
     link: "https://developer.mozilla.org/en-US/"
     },
   }
+  const dummyPredictives = {
+    0: { type: "soil",
+      title: "Soil Type",
+      value: "silt",
+    },
+    1:{    type: "temperature",
+    title: "Forcasting Temperature",
+    value: "17.5",
+  },
+    2:{    type: "precipitation",
+    title: "Forcasting Precipitation",
+    value: "86.8",
+  },
+  }
+
 
   const [seedModalOpen, setSeedModalOpen] = useState(false)
   const [currentSeed, setCurrentSeed] = useState({})
@@ -83,7 +99,7 @@ const Reco = React.forwardRef((props, ref) => {
 
   return(
     <div ref={ref} className="reco-page-container">
-      <img id="solution-logo" src={plugginLogo} alt="solution logo" />
+      <img id="solution-logo" src={logo} alt="solution logo" />
       <h2>Your custom seed recommendation</h2>
       <div className="reco-page-recap">
         <ResearchCard view="recoPage" searchParams={props.searchParams}/>
@@ -92,7 +108,17 @@ const Reco = React.forwardRef((props, ref) => {
         </div>
       </div>
       <div className="reco-page-results">
-        <div className="predictive-value-container"> Predictive values</div>
+        <div className="predictive-value-container"> 
+          <div className="predictive-value-title bold">
+            <h4 className="bold">Estimate based on:</h4>
+          </div> 
+          <div className="predictive-list d-flex-column" >
+            {Object.keys(dummyPredictives).map((predictive, i) => (
+                <PredictiveDetail key={dummyPredictives[predictive].type} predictiveInfo={dummyPredictives[predictive]} />
+              ))
+            }  
+          </div>
+        </div>
         <div className="seeds-list d-flex">
           {Object.keys(dummySeeds).map((seed, i) => (
               <SeedCard key={dummySeeds[seed].name} seedInfo={dummySeeds[seed]} seedRanking={i} onOpenSeedModal={onOpenSeedModal} view="seed"/>
@@ -100,8 +126,8 @@ const Reco = React.forwardRef((props, ref) => {
           }  
         </div>
       </div>
-      {/* {seedModalOpen && */}
-      {seedModalOpen === true && (
+      {/* To add when will be seed details to display */}
+      {/* {seedModalOpen === true && (
         <ComposedModal
           open={seedModalOpen}
           onClose={closeSeedModalOpen}
@@ -126,7 +152,7 @@ const Reco = React.forwardRef((props, ref) => {
             <div className="modal-back-btn d-flex" onClick={closeSeedModalOpen}><Button>Back to list</Button></div>
           </ModalBody>
         </ComposedModal>
-      )}      {/* } */}
+      )} */}
     </div>
   )
 });

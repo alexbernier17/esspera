@@ -111,7 +111,6 @@ button:hover {
   }
 }
 
-
 .reco-page-recap{
   gap: 1rem;
   align-items: center;
@@ -126,94 +125,121 @@ button:hover {
   margin-top: 1rem;
   
 }
-.seeds-list{
-  flex-wrap: wrap;
+
+.seed-card-detail-icon, .predictive-card-detail-icon{
+  border-radius: 10px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
   justify-content: center;
+  align-items: center;
+
+  svg {
+    fill: white;
+  }
+}
+.seed-card-title, .predictive-card-title {
+  // justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+}
+.seed-card-detail, .predictive-card-container  {
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.seed-card-detail-description, .predictive-card-detail-description{
+  margin-left: 2rem;
+  font-weight: 400;
 }
 
 .predictive-value-container{
   background: #FDF5EE;
   border-radius: 20px;
+  gap: 1rem;
+}
+.predictive-value-title, .predictive-list {
+  padding: 1rem;
+  text-align: center;
+}
+.predictive-list {
+  gap: 3rem;
+  margin-left: 1rem;
+}
+.predictive-card-detail-icon {
+  background: var(--primary-color) !important;
 }
 
+.seeds-list{
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .seed-card-container {
   position: relative;
   padding: 1rem;
-  width: 50%;
   font-weight: 500;
-  cursor: pointer;
+}
+.seed-card-container {
+  width: 50%;
+  // cursor: pointer;
+}
+.seed-card-rank{
+  position: absolute;
+  left: 45%;
+  top: 0%;
+  background: #CD832A;
+  border-radius: 20px;
+  width: 3rem;
+  padding: 0.5rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
-  .seed-card-rank{
-    position: absolute;
-    left: 45%;
-    top: 0%;
-    background: #CD832A;
-    border-radius: 20px;
-    width: 3rem;
-    padding: 0.5rem;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+.seed-card-details, .seedDetails-card-details{
+  border-radius: 20px;
+  box-sizing: border-box;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem  1rem 0.5rem 1rem;
+}
+.seed-card-details{
+  background: linear-gradient(90deg, rgba(231, 238, 237, 0.6) 0%, rgba(253, 245, 238, 0.6) 97.17%);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+.seedDetails-card-details{
+  background: linear-gradient(90deg, rgba(255, 254, 254, 0.6) 0%, rgba(253, 245, 238, 0.6) 97.17%);
+  border: 1px solid #CD832A;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  height: 10rem;
+  justify-content: center;
+  padding: 1rem 1rem 1rem 2rem;
+  gap: 2rem;
+  align-items: start;
 
-  .seed-card-details, .seedDetails-card-details{
-    border-radius: 20px;
-    box-sizing: border-box;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem  1rem 0.5rem 1rem;
+  h4{
+    font-weight: 500;
+    color: var(--third-color);
   }
-  .seed-card-details{
-    background: linear-gradient(90deg, rgba(231, 238, 237, 0.6) 0%, rgba(253, 245, 238, 0.6) 97.17%);
-    border: 1px solid var(--secondary-color);
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-  }
-  .seedDetails-card-details{
-    background: linear-gradient(90deg, rgba(255, 254, 254, 0.6) 0%, rgba(253, 245, 238, 0.6) 97.17%);
-    border: 1px solid #CD832A;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-    height: 10rem;
-    justify-content: center;
-    padding: 1rem 1rem 1rem 2rem;
-    gap: 2rem;
-    align-items: start;
+}
 
-    h4{
-      font-weight: 500;
-      color: var(--third-color);
-    }
+.seed-card-details-container{
+  justify-content: space-around;
+  width: 100%;
 
-    .seed-card-detail-icon {
-      background: var(--third-color) !important;
-    }
-  }
-  
-  .seed-card-details-container{
-    justify-content: space-between;
-    width: 100%;
-
-  }
-  .seed-card-detail{
-    justify-content: space-between;
-    gap: 0.5rem;
-    align-items: center;
-
-    .seed-card-detail-icon{
-      background: var(--secondary-color);
-      border-radius: 10px;
-      width: 2rem;
-      height: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      svg {
-        fill: white;
-      }
-    }
-  }
+}
+.seed-card-detail {
+  justify-content: space-between;
+}
+.seed-card-title {
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+}
+.seed-card-detail-icon{
+  background: var(--secondary-color);
 }
 
 .seeds-off-page-btn{
