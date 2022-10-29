@@ -1,17 +1,17 @@
 # ESSPERA
 
 ## Contents
-- [Short description](https://github.com/Julie-Saurat/perma-challenge#short-description)
-- [Demo video](https://github.com/Julie-Saurat/perma-challenge#demo-video)
-- [The architecture](https://github.com/Julie-Saurat/perma-challenge#long-description)
-- [Long description](https://github.com/Julie-Saurat/perma-challenge#short-description)
-- [Project roadmap](https://github.com/Julie-Saurat/perma-challenge#project-roadmap)
-- [Getting started](https://github.com/Julie-Saurat/perma-challenge#getting-started)
-- [Built with](https://github.com/Julie-Saurat/perma-challenge#built-with)
-- [Contributing](https://github.com/Julie-Saurat/perma-challenge#contributing)
-- [Versioning](https://github.com/Julie-Saurat/perma-challenge#versioning)
-- [Authors](https://github.com/Julie-Saurat/perma-challenge#authors)
-- [License](https://github.com/Julie-Saurat/perma-challenge#License)
+- [Short description](https://github.com/Julie-Saurat/esspera#short-description)
+- [Demo video](https://github.com/Julie-Saurat/esspera#demo-video)
+- [The architecture](https://github.com/Julie-Saurat/esspera#long-description)
+- [Long description](https://github.com/Julie-Saurat/esspera#short-description)
+- [Project roadmap](https://github.com/Julie-Saurat/esspera#project-roadmap)
+- [Getting started](https://github.com/Julie-Saurat/esspera#getting-started)
+- [Built with](https://github.com/Julie-Saurat/esspera#built-with)
+- [Contributing](https://github.com/Julie-Saurat/esspera#contributing)
+- [Versioning](https://github.com/Julie-Saurat/esspera#versioning)
+- [Authors](https://github.com/Julie-Saurat/esspera#authors)
+- [License](https://github.com/Julie-Saurat/esspera#License)
 
 ## Short description
 
@@ -51,7 +51,7 @@ recommendation
 ![ESSPERA Solution Architecture_futur](https://user-images.githubusercontent.com/65171375/198745722-92e947f5-b0fd-4436-9e5d-b9dad6fdcd21.png)
 
 PDF version:
-[ESSPERA Solution Architecture.pdf](https://github.com/Julie-Saurat/perma-challenge/files/9892291/ESSPERA.Solution.Architecture.pdf)
+[ESSPERA Solution Architecture.pdf](https://github.com/Julie-Saurat/esspera/files/9892291/ESSPERA.Solution.Architecture.pdf)
 
 ## Long description
 
@@ -97,7 +97,7 @@ PDF version:
 - IBM Environmental Intelligence suite & Weather Data API - To access to real time weather
 
 More details here:
-[ESSPERA - technology descrption.docx](https://github.com/Julie-Saurat/perma-challenge/files/9892319/ESSPERA.-.technology.descrption.docx)
+[ESSPERA - technology descrption.docx](https://github.com/Julie-Saurat/esspera/files/9892319/ESSPERA.-.technology.descrption.docx)
 
 ## Contributing
 
