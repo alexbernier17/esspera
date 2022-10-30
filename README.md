@@ -44,7 +44,7 @@ Helping them to make better decision with confidence to grow more resilient, we 
 5. IBM Watson Studio: manage CP4D as a Service assets; Store data assets and model required when running Jupyter notebooks
 6. IBM Watson Machine Learning: used by deployment to get the prediction of seed yield
 7. Cloud Object Storage: used by CP4D as a Service to store model and CSVs
-8. Jupyter Notebooks: Clean, amend with weather data and soil type from CSVs; Train models to deploy
+8. Jupyter Notebooks: Clean CSVs, amend with weather data and soil type; Train models to deploy
 9. IBM Environmental Intelligence Suite: get historical and forecast weather data
 
 ### Production Architecture (Future):
@@ -87,7 +87,7 @@ Discover the full path here:
 ### Running the back-end web services used by the front-end
 1. Navigate to the [Server](Server) folder and run the command: `npm install` to install the required packages to run the back-end web services
 2. Edit the .env file and fill in the required value
-3. To start the back-end web services, run the command: `node Server.js`
+3. To start the back-end web services, run the command: `npm start`
 ### Running the front-end web application
 1. Navigate to the [front-end](front-end) folder and run the command: `npm install` to install the required packages to run the web application
 2. To start the front-end web application, run the command `npm start`. It should automatically start a web browser session, otherwise from a web browser, simply go to http://localhost:3000
