@@ -6,54 +6,41 @@ const app = express();
 const ibmdb = require("ibm_db");
 const connStr = process.env.CONN_STRING;
 
-const epochMonths = [1598918400000, 1596240000000, 1593561600000, 1590969600000, 1588291200000];
-
 app.get("/yield", async (request, response) => {
-  let modelValues = [];
   let lon = request.query.lon;
   let lat = request.query.lat;
   let cropType = request.query.cropType;
-  let weatheResponse = await apis.getRTandT();
-  if (weatheResponse.data) {
-    let rt = weatheResponse.data.layers["500"].Precipitationanomalysurface1Month2.dimensions[0].rt[0];
-    for (let i = 0; i < 5; i++) {
-      let temperatureResposne = await apis.getTemperature(epochMonths[i]);
-      let temperatureValue = temperatureResposne.data.features[0].properties.value;
-      console.log({ temperatureValue });
-      modelValues.push(Number(temperatureValue.toFixed(1)));
-      console.log("-------------------------------------");
-      let t = weatheResponse.data.layers["500"].Precipitationanomalysurface1Month2.dimensions[0].t[i];
-      let precipitationResponse = await apis.getPrecipitation(rt, t);
-      let precipitationValue = precipitationResponse.data.features[0].properties.value;
-      let normalreponse = await apis.getNormal(epochMonths[i]);
-      let normalValue = normalreponse.data.features[0].properties.value;
-      let modelValue = precipitationValue + normalValue;
-      console.log({ precipitationValue });
-      console.log({ normalValue });
-      console.log({ modelValue });
-      modelValues.push(Number(modelValue.toFixed(1)));
-      console.log("====================================");
-    }
+  // corn prediction is from May to September
+  const yearFrom = 2023;
+  const monthFrom = 4;
+  const yearTo = 2023;
+  const monthTo = 10;
+  // returns { forecast: true/false, values: [{temperature: x.xx, precipitation: y.yy}, ...]}
+  const weatherInfo = await apis.getWeatherForecastOrCurrent(yearFrom, monthFrom, yearTo, monthTo, lat, lon);
+  var predictionInputValues = [];
+  for(const weatherValues of weatherInfo.values) {
+    predictionInputValues.push(weatherValues.temperature);
+    predictionInputValues.push(weatherValues.precipitation);
   }
+
   let yieldsInfo = [];
-  await constructResponseFromDbData(yieldsInfo, lon, lat, cropType, modelValues);
+  await getYieldPredictionForCropType(yieldsInfo, lon, lat, cropType, predictionInputValues);
   yieldsInfo = yieldsInfo.sort((a, b) => (a.yield < b.yield ? 1 : -1));
   console.log("send Res");
-  response.send({ yieldsInfo });
+  response.send({ weatherInfo, yieldsInfo });
 });
 
-constructResponseFromDbData = async (yieldsInfo, lon, lat, cropType, modelValues) => {
-  const myPromise = new Promise(async (resolve, reject) => {
-    let IBMTokenResposne = await apis.getIBMToken();
-    let IBMToken = IBMTokenResposne.data.access_token;
+getYieldPredictionForCropType = (yieldsInfo, lon, lat, cropType, predictionInputValues) => {
+  return new Promise(async (resolve, reject) => {
+    const ibmCloudBearerTokenResponse = await apis.getIBMCloudBearerToken();
+    const ibmCloudBearerToken = ibmCloudBearerTokenResponse.data.access_token;
 
-    let soilTypeResponse = await apis.getSoilType(lon, lat);
+    const soilTypeResponse = await apis.getSoilType(lon, lat);
+    const soilType = soilTypeResponse.data.wrb_class_name;
 
-    let soilType = soilTypeResponse.data.wrb_class_name;
-
-    ibmdb.open(connStr, function (err, conn) {
+    ibmdb.open(connStr, (err, conn) => {
       if (err) return console.log(err);
-      conn.query("select * from WML_MODELS where CROP_TYPE=" + cropType, async function (err, data) {
+      conn.query("select * from WML_MODELS where CROP_TYPE=" + cropType, async (err, data) => {
         if (err) console.log(err);
         for (let i in data) {
           let yield = {};
@@ -63,49 +50,26 @@ constructResponseFromDbData = async (yieldsInfo, lon, lat, cropType, modelValues
           yield.soilType = soilType;
           const soilTypesArray = data[i].MODEL_SOIL_TYPES;
           const deploymentId = data[i].DEPLOYMENT_ID;
-          var soilIndex = soilTypesArray.indexOf(soilType);
+          let soilIndex = soilTypesArray.indexOf(soilType);
           if (soilIndex == -1) {
             soilIndex = 0;
           }
-          if ((modelValues.length = 11)) {
-            modelValues.pop();
+          if ((predictionInputValues.length = 11)) {
+            predictionInputValues.pop();
           }
-          modelValues.push(soilIndex);
-          let yieldResponse = await apis.getYeild(IBMToken, modelValues, deploymentId);
-          let yieldValue = yieldResponse.data.predictions[0].values[0];
+          predictionInputValues.push(soilIndex);
+          const yieldResponse = await apis.getYieldPrediction(ibmCloudBearerToken, predictionInputValues, deploymentId);
+          const yieldValue = yieldResponse.data.predictions[0].values[0];
           yield.yield = yieldValue[0].toFixed(1);
           yieldsInfo.push(yield);
         }
-        conn.close(function () {
-          console.log("done");
+        conn.close(() => {
           resolve();
         });
       });
     });
   });
-  return myPromise;
 };
-
-// app.get("/test-db", (request, response) => {
-//   let yiEldData = [];
-//   ibmdb.open(connStr, function (err, conn) {
-//     if (err) return console.log(err);
-//     conn.query("select * from WML_MODELS where CROP_TYPE='Early Maturity Corn'", function (err, data) {
-//       if (err) console.log(err);
-//       else console.log(data);
-//       for (let i in data) {
-//         let yield = {};
-//         yield.cropType = data[i].CROP_TYPE;
-//         yield.seedVariantName = data[i].SEED_VARIANT_NAME;
-//         yield.seedVariantBrand = data[i].SEED_VARIANT_BRAND;
-//         yield.modelSoilTypes = data[i].MODEL_SOIL_TYPES;
-//       }
-//       conn.close(function () {
-//         console.log("done");
-//       });
-//     });
-//   });
-// });
 
 app.listen(5000, () => {
   console.log("Listen on the port 5000...");
