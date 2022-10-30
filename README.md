@@ -3,8 +3,9 @@
 ## Contents
 - [Short description](https://github.com/Julie-Saurat/esspera#short-description)
 - [Demo video](https://github.com/Julie-Saurat/esspera#demo-video)
-- [The architecture](https://github.com/Julie-Saurat/esspera#long-description)
-- [Long description](https://github.com/Julie-Saurat/esspera#short-description)
+- [The architecture](https://github.com/Julie-Saurat/esspera#the-architecture)
+- [Long description](https://github.com/Julie-Saurat/esspera#Long-description)
+- [Design thinking path](https://github.com/Julie-Saurat/esspera#Design-thinking-path)
 - [Project roadmap](https://github.com/Julie-Saurat/esspera#project-roadmap)
 - [Getting started](https://github.com/Julie-Saurat/esspera#getting-started)
 - [Built with](https://github.com/Julie-Saurat/esspera#built-with)
@@ -54,6 +55,11 @@ PDF version:
 [ESSPERA Solution Architecture.pdf](https://github.com/Julie-Saurat/esspera/files/9892291/ESSPERA.Solution.Architecture.pdf)
 
 ## Long description
+
+## Design thinking path
+![ESSPERA-Design thinking-extract](https://user-images.githubusercontent.com/65171375/198857424-071d6e36-fc22-4eef-b260-990eb92aefb8.jpg)
+Discover the full path here:
+[ESSPERA-Design thinking.pdf](https://github.com/Julie-Saurat/esspera/files/9894826/ESSPERA-Design.thinking.pdf)
 
 ## Project roadmap
 ![Roadmap](https://user-images.githubusercontent.com/65171375/198656432-5cd834fc-3787-4673-bdb4-ffdd5c99a0af.png)
