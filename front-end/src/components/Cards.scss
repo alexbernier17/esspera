@@ -138,6 +138,11 @@ button:hover {
     fill: white;
   }
 }
+.predictive-card-detail-icon.small {
+  border-radius: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .seed-card-title, .predictive-card-title {
   // justify-content: space-between;
   gap: 0.5rem;

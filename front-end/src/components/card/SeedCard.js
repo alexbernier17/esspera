@@ -11,9 +11,9 @@ function SeedCard(props) {
     <div className="seed-card-container" >
       {props.view === "seed" &&
         <div onClick={e=> {props.onOpenSeedModal(seedDetails)}}>
-          <div className="seed-card-rank d-flex">{props.seedRanking}</div>
+          <div className="seed-card-rank d-flex"># {props.seedRanking + 1}</div>
           <div className="seed-card-details">
-            <div className="bold">{seedDetails.name}</div>
+            <div className="bold">{seedDetails.seedVariantBrand}: {seedDetails.seedVariantName}</div>
             <div className="seed-card-details-container d-flex">
               <div className="seed-card-detail d-flex-column">
                 <div className="seed-card-title d-flex">
@@ -23,7 +23,7 @@ function SeedCard(props) {
                   </div>
                   <div className="bold">Yield</div>
                 </div>
-                <div className="seed-card-detail-description">{seedDetails.yield}</div>
+                <div className="seed-card-detail-description">{seedDetails.yield} (bu/A)</div>
               </div>
               <div className="seed-card-detail d-flex-column">
                 <div className="seed-card-title d-flex">
@@ -33,7 +33,7 @@ function SeedCard(props) {
                   <div className="bold">Company</div>
                 </div>
 
-                <div className="seed-card-detail-description">{seedDetails.company}</div>
+                <div className="seed-card-detail-description">{seedDetails.seedVariantCompany}</div>
               </div>
             </div>
           </div>

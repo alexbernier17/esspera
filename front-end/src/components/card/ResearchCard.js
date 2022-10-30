@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { TextInput, Select, SelectItem, Dropdown } from "@carbon/react";
-
+import { TextInput, Button, Select, SelectItem, Dropdown } from "@carbon/react";
 const items = ["Early Maturity Corn", "Soybean", "Rice", "Wheat", "Nut"];
 
 function ResearchCard(props) {
   const searchParams = props.searchParams;
+
+  const [latInputValue, setLatInputValue] = useState("");
+  const [longInputValue, setLongInputValue] = useState("");
+
+  const onClickUseMyLocation = () => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log("geolocation.getCurrentPosition latitude is :", position.coords.latitude);
+      setLatInputValue(position.coords.latitude);
+      props.onSetInput(position.coords.latitude, "lat");
+      console.log("geolocation.getCurrentPosition longitude is :", position.coords.longitude);
+      setLongInputValue(position.coords.longitude);
+      props.onSetInput(position.coords.longitude, "long");
+    });
+  };
 
   return (
     <>
@@ -19,8 +32,11 @@ function ResearchCard(props) {
                 id="lat"
                 invalidText="A valid value is required"
                 placeholder="Enter latitude"
+                value={latInputValue}
                 onChange={(e) => {
-                  props.onSetInput(e.target.value, "lat");
+                  const value = e.target.value;
+                  setLatInputValue(value);
+                  props.onSetInput(value, "lat");
                 }}
               />
               <TextInput
@@ -28,11 +44,17 @@ function ResearchCard(props) {
                 id="long"
                 invalidText="A valid value is required"
                 placeholder="Enter longitude"
+                value={longInputValue}
                 onChange={(e) => {
-                  props.onSetInput(e.target.value, "long");
+                  const value = e.target.value;
+                  setLongInputValue(value);
+                  props.onSetInput(value, "long");
                 }}
               />
             </div>
+            <Button onClick={onClickUseMyLocation}>
+              Use my location
+            </Button>
           </div>
           <div className="research-card-element d-flex-column">
             Crop type:
@@ -43,7 +65,8 @@ function ResearchCard(props) {
               items={items}
               label="Select crop"
               onChange={(e) => {
-                props.onSetInput(e.selectedItem, "crop");
+                const value = e.selectedItem;
+                props.onSetInput(value, "crop");
               }}
             />
           </div>
