@@ -17,16 +17,16 @@
 ## Short description
 
 ### What's the problem?
-**Climate change is one of the major challenges of the 21the century**. Introducing further **unpredictability in food security**, directly impacting the performance of various seeds for the next growing seasons, making our **farmers’s crops decision even riskier**.
+**Climate change is one of the major challenges of the 21st century**. Introducing further **unpredictability in food security**, directly impacting the performance of various seeds for the next growing seasons, making our **farmers’ crops decision even riskier**.
 
 To remain sustainable, **farming must adapt quickly** to the changing conditions of our world.
 
 ### How can technology help?
-**Leveraging AI and model training**, we beleive we can - all together - provide many solutions for a **more resilient local agriculture**, leading through a **global improvement of food security**.
+**Leveraging AI and model training**, we believe we can - all together - provide many solutions for a **more resilient local agriculture**, leading through a **global improvement of food security**.
 
 ### The idea
 ESSPERA was imagined to response to the big issue of food security from its roots. 
-The idea is to **provide farmers the best seed recommendation**, thanks to farmers associations' and governmental **seed trials results**. 
+The idea is to **provide farmers the best seed recommendation**, thanks to farmers associations and governmental **seed trials results**. 
 
 Helping them to make better decision with confidence to grow more resilient, we **ensure a better local food security**.
 ![What is ESSPERA](https://user-images.githubusercontent.com/65171375/198662592-f1c8608e-04fb-462c-986b-edebb51cfe13.png)
@@ -37,16 +37,15 @@ Helping them to make better decision with confidence to grow more resilient, we 
 ## The architecture
 ### Test/Dev Architecture (Existing):
 ![ESSPERA Solution Architecture_existing](https://user-images.githubusercontent.com/65171375/198745641-5ad19c36-a26d-401a-a352-2abd926fe616.png)
-1. Web Application: Farmer can give data and access the dashboard to get the seed 
-recommendation
-2. ESSPERA database: calling right prediction model for specific crop 
-3. Exposed API: exposing deployed prediction model as API 
-4. Deployment: Deploy the train model 
-5. IBM Watson Studio: Run the model from Jupyter notebook 
-6. IBM Machine learning: get the prediction of seed yield
-7. Cloud object storage: Store Model and CSVs
-8. Jupyter Notebook: Add, Clean and process soil, Seed and weather CSVs 
-9. IBM Environmental Intelligence suit: Get the weather data 
+1. Web application: farmers can access their dashboard to get seed recommendation based on their location
+2. ESSPERA database: storing mapping between model/deployment and crop type
+3. Exposed API: exposing deployed prediction model as API
+4. Deployment: deploy trained models and created callable APIs to do prediction
+5. IBM Watson Studio: manage CP4D as a Service assets; Store data assets and model required when running Jupyter notebooks
+6. IBM Watson Machine Learning: used by deployment to get the prediction of seed yield
+7. Cloud Object Storage: used by CP4D as a Service to store model and CSVs
+8. Jupyter Notebooks: Clean, amend with weather data and soil type from CSVs; Train models to deploy
+9. IBM Environmental Intelligence Suite: get historical and forecast weather data
 
 ### Production Architecture (Future):
 ![ESSPERA Solution Architecture_futur](https://user-images.githubusercontent.com/65171375/198745722-92e947f5-b0fd-4436-9e5d-b9dad6fdcd21.png)
@@ -94,13 +93,14 @@ Discover the full path here:
 2. To start the front-end web application, run the command `npm start`. It should automatically start a web browser session, otherwise from a web browser, simply go to http://localhost:3000
 
 ## Built with
-- IBM Cloud Object Storage - Store datasets and the statistic model
-- IBM Watson studio (Jupiter and Notebook) - Create and build the statistic model
-- IBM Watson Machine Learning - Deploy the statistic model
-- React & Carbon Design - Front framework and library 
-- Node JS - Create the backend server
-- Db2 - Store seed data
-- IBM Environmental Intelligence suite & Weather Data API - To access to real time weather
+- IBM Cloud Object Storage - Store datasets and the statistic models
+- IBM Watson Studio - Manage machine learning projects, deployments, data assets
+- Jupyter Notebook - Process data assets, train models and push to Watson Studio/Watson Machine Learning
+- IBM Watson Machine Learning - Predicts data based on trained models
+- ReactJS & Carbon Design - Front-end framework and library
+- NodeJS & ExpressJS - Back-end framework and library
+- Db2 - Store data and mapping to model and deployment
+- IBM Environmental Intelligence Suite (Standard Suite + Premium Weather Data APIs) - Get historical and forecast weather data
 
 More details here:
 [ESSPERA - technology descrption.docx](https://github.com/Julie-Saurat/esspera/files/9892319/ESSPERA.-.technology.descrption.docx)
