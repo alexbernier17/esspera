@@ -23,20 +23,20 @@ app.get("/yield", async (request, response) => {
     predictionInputValues.push(weatherValues.precipitation);
   }
 
+  const soilTypeResponse = await apis.getSoilType(lon, lat);
+  const soilType = soilTypeResponse.data.wrb_class_name;
+
   let yieldsInfo = [];
-  await getYieldPredictionForCropType(yieldsInfo, lon, lat, cropType, predictionInputValues);
-  yieldsInfo = yieldsInfo.sort((a, b) => (a.yield < b.yield ? 1 : -1));
+  await getYieldPredictionForCropType(yieldsInfo, lon, lat, cropType, soilType, predictionInputValues);
+  yieldsInfo = yieldsInfo.sort((a, b) => (+a.yield < +b.yield ? 1 : -1));
   console.log("send Res");
-  response.send({ weatherInfo, yieldsInfo });
+  response.send({ soilType, weatherInfo, yieldsInfo });
 });
 
-getYieldPredictionForCropType = (yieldsInfo, lon, lat, cropType, predictionInputValues) => {
+getYieldPredictionForCropType = (yieldsInfo, lon, lat, cropType, soilType, predictionInputValues) => {
   return new Promise(async (resolve, reject) => {
     const ibmCloudBearerTokenResponse = await apis.getIBMCloudBearerToken();
     const ibmCloudBearerToken = ibmCloudBearerTokenResponse.data.access_token;
-
-    const soilTypeResponse = await apis.getSoilType(lon, lat);
-    const soilType = soilTypeResponse.data.wrb_class_name;
 
     ibmdb.open(connStr, (err, conn) => {
       if (err) return console.log(err);
@@ -47,7 +47,6 @@ getYieldPredictionForCropType = (yieldsInfo, lon, lat, cropType, predictionInput
           yield.cropType = data[i].CROP_TYPE;
           yield.seedVariantName = data[i].SEED_VARIANT_NAME;
           yield.seedVariantBrand = data[i].SEED_VARIANT_BRAND;
-          yield.soilType = soilType;
           const soilTypesArray = data[i].MODEL_SOIL_TYPES;
           const deploymentId = data[i].DEPLOYMENT_ID;
           let soilIndex = soilTypesArray.indexOf(soilType);
