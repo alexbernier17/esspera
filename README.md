@@ -61,8 +61,7 @@ Discover the full path here:
 [ESSPERA-Design thinking.pdf](https://github.com/Julie-Saurat/esspera/files/9894826/ESSPERA-Design.thinking.pdf)
 
 ## Project roadmap
-![Roadmap](https://user-images.githubusercontent.com/65171375/198656432-5cd834fc-3787-4673-bdb4-ffdd5c99a0af.png)
-
+![roadmap](https://user-images.githubusercontent.com/65171375/199017074-220cbea0-e96b-4264-9dc3-069c14f767db.jpg)
 
 ## Getting started
 ### Pre-requisites
@@ -116,5 +115,6 @@ More details here:
 - [Ken Lim](https://github.com/kenlim1228)
 - [rekhazim1](https://github.com/rekhazim1)
 - [Sagarshah30894](https://github.com/Sagarshah30894)
+- [Alex Bernier](https://github.com/alexbernier17)
 
 ## License
