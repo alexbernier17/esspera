@@ -51,16 +51,16 @@ const Reco = React.forwardRef((props, ref) => {
 
   const mapBrandToCompany = (yieldsInfo) => {
     yieldsInfo.forEach((yieldInfo) => {
-      if(yieldInfo.seedVariantBrand == "Thunder Seed") {
-        yieldInfo.seedVariantCompany = "Thunder Seed";
-      } else if(yieldInfo.seedVariantBrand == "Cornelius") {
-        yieldInfo.seedVariantCompany = "Cornelius Seed";
-      } else if(yieldInfo.seedVariantBrand == "Federal Hybrids") {
-        yieldInfo.seedVariantCompany = "Federal Hybrids";
-      } else if(yieldInfo.seedVariantBrand == "Jung") {
-        yieldInfo.seedVariantCompany = "Jung Seed Genetics, Inc";
-      } else if(yieldInfo.seedVariantBrand == "Legacy Seeds") {
-        yieldInfo.seedVariantCompany = "Legacy Seeds, Inc";
+      if(yieldInfo.seedVariantBrand == "ArgoHybrids") {
+        yieldInfo.seedVariantCompany = "ArgoHybrids Inc";
+      } else if(yieldInfo.seedVariantBrand == "Corn Seeds") {
+        yieldInfo.seedVariantCompany = "Corn Seeds Genetics";
+      } else if(yieldInfo.seedVariantBrand == "Hybrids Seeds") {
+        yieldInfo.seedVariantCompany = "Hybrids Seeds Inc";
+      } else if(yieldInfo.seedVariantBrand == "C Genetics") {
+        yieldInfo.seedVariantCompany = "C Genetics Inc";
+      } else if(yieldInfo.seedVariantBrand == "Legacy Trials") {
+        yieldInfo.seedVariantCompany = "Legacy Trials";
       }
     });
   };
