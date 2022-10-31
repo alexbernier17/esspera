@@ -106,9 +106,9 @@ Discover the full path here:
 
 ## Authors
 - [Alex Bernier](https://github.com/alexbernier17)
+- [Hazim Rekab](https://github.com/rekhazim1)
 - [Julie Saurat](https://github.com/Julie-Saurat)
 - [Ken Lim](https://github.com/kenlim1228)
-- [rekhazim1](https://github.com/rekhazim1)
-- [Sagarshah30894](https://github.com/Sagarshah30894)
+- [Sagar Shah](https://github.com/Sagarshah30894)
 
 ## License
