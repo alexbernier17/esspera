@@ -100,7 +100,7 @@ Discover the full path here:
 - IBM Environmental Intelligence Suite (Standard Suite + Premium Weather Data APIs) - Get historical and forecast weather data
 
 ## Contributing
-
+Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Julie-Saurat/esspera/tags).
