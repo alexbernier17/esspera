@@ -102,7 +102,7 @@ Discover the full path here:
 
 
 ## Versioning
-
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Julie-Saurat/esspera/tags).
 
 ## Authors
 - [Alex Bernier](https://github.com/alexbernier17)
@@ -112,4 +112,4 @@ Discover the full path here:
 - [Sagar Shah](https://github.com/Sagarshah30894)
 
 ## License
-This project is licensed under the Apache 2 License
+This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
