@@ -50,9 +50,6 @@ Helping them to make better decision with confidence to grow more resilient, we 
 ### Production Architecture (Future):
 ![ESSPERA Solution Architecture_futur](https://user-images.githubusercontent.com/65171375/198745722-92e947f5-b0fd-4436-9e5d-b9dad6fdcd21.png)
 
-PDF version:
-[ESSPERA Solution Architecture.pdf](https://github.com/Julie-Saurat/esspera/files/9892291/ESSPERA.Solution.Architecture.pdf)
-
 ## Long description
 
 ## Design thinking path
@@ -100,9 +97,6 @@ Discover the full path here:
 - NodeJS & ExpressJS - Back-end framework and library
 - Db2 - Store data and mapping to model and deployment
 - IBM Environmental Intelligence Suite (Standard Suite + Premium Weather Data APIs) - Get historical and forecast weather data
-
-More details here:
-[ESSPERA - technology descrption.docx](https://github.com/Julie-Saurat/esspera/files/9892319/ESSPERA.-.technology.descrption.docx)
 
 ## Contributing
 
