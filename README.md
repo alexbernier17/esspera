@@ -112,4 +112,4 @@ Discover the full path here:
 - [Sagar Shah](https://github.com/Sagarshah30894)
 
 ## License
-This project is licensed under the Apache 2 License - see the LICENSE file for details.
+This project is licensed under the Apache 2 License - see the [LICENSE](https://github.com/Call-for-Code/Project-Sample/blob/main/LICENSE) file for details.
