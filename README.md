@@ -112,3 +112,4 @@ Discover the full path here:
 - [Sagar Shah](https://github.com/Sagarshah30894)
 
 ## License
+Apache 2.0 licence
