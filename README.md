@@ -50,9 +50,6 @@ Helping them to make better decision with confidence to grow more resilient, we 
 ### Production Architecture (Future):
 ![ESSPERA Solution Architecture_futur](https://user-images.githubusercontent.com/65171375/198745722-92e947f5-b0fd-4436-9e5d-b9dad6fdcd21.png)
 
-PDF version:
-[ESSPERA Solution Architecture.pdf](https://github.com/Julie-Saurat/esspera/files/9892291/ESSPERA.Solution.Architecture.pdf)
-
 ## Long description
 
 ## Design thinking path
@@ -61,8 +58,7 @@ Discover the full path here:
 [ESSPERA-Design thinking.pdf](https://github.com/Julie-Saurat/esspera/files/9894826/ESSPERA-Design.thinking.pdf)
 
 ## Project roadmap
-![Roadmap](https://user-images.githubusercontent.com/65171375/198656432-5cd834fc-3787-4673-bdb4-ffdd5c99a0af.png)
-
+![roadmap](https://user-images.githubusercontent.com/65171375/199017074-220cbea0-e96b-4264-9dc3-069c14f767db.jpg)
 
 ## Getting started
 ### Pre-requisites
@@ -102,9 +98,6 @@ Discover the full path here:
 - Db2 - Store data and mapping to model and deployment
 - IBM Environmental Intelligence Suite (Standard Suite + Premium Weather Data APIs) - Get historical and forecast weather data
 
-More details here:
-[ESSPERA - technology descrption.docx](https://github.com/Julie-Saurat/esspera/files/9892319/ESSPERA.-.technology.descrption.docx)
-
 ## Contributing
 
 
@@ -112,9 +105,11 @@ More details here:
 
 
 ## Authors
+- [Alex Bernier](https://github.com/alexbernier17)
+- [Hazim Rekab](https://github.com/rekhazim1)
 - [Julie Saurat](https://github.com/Julie-Saurat)
 - [Ken Lim](https://github.com/kenlim1228)
-- [rekhazim1](https://github.com/rekhazim1)
-- [Sagarshah30894](https://github.com/Sagarshah30894)
+- [Sagar Shah](https://github.com/Sagarshah30894)
 
 ## License
+This project is licensed under the Apache 2 License
