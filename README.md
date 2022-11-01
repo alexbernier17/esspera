@@ -34,7 +34,7 @@ Helping them to make better decision with confidence to grow more resilient, we 
 
 ## Demo video
 Discover Esspera in video here: [https://youtu.be/kWplqUx48yY](https://youtu.be/kWplqUx48yY)
-[![Esspera Demo Video](https://user-images.githubusercontent.com/3689704/199121490-902e9a42-de86-482d-ad1a-9d741eebeb34.png)](https://youtu.be/kWplqUx48yY)
+[![Esspera Demo Video](https://user-images.githubusercontent.com/3689704/199121490-902e9a42-de86-482d-ad1a-9d741eebeb34.png)](https://youtu.be/t8KhvVDGRd4)
 
 ## The architecture
 ### Test/Dev Architecture (Existing):
