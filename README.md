@@ -53,6 +53,13 @@ Discover Esspera in video here: [https://youtu.be/t8KhvVDGRd4](https://youtu.be/
 ![ESSPERA Solution Architecture_futur](https://user-images.githubusercontent.com/65171375/198745722-92e947f5-b0fd-4436-9e5d-b9dad6fdcd21.png)
 
 ## Long description
+Climate change is putting constant pressure on agricultural productivity, threatening decades of global progress in improving food security. It is a complex problem that can only be tackled through a combinations of incremental improvement. But broadly speaking, in the words of the IMF:
+
+"Investing in climate-resilient agriculture will be vital to increasing future harvests. More intense and more unpredictable climatic events are increasing food insecurity. Low-income countries, particularly in sub-Saharan Africa , are among the least prepared to face the effects of climate change. Solutions should be tailored to country circumstances, with a focus on low-cost, high-impact measures, such as investing in new crop varieties, improving water management, and information dissemination."
+
+Esspera came about out of our desire to contribute such a low-cost, high-impact solution to this fight. During our research, we discovered the extent of the large-scale efforts currently underway to rapidly develop productive cultivars adapted to rapidly changing global and local climatic conditions. We observed the extensive germplasm data that is being made publicly available through organisations like the CIMMYT, and the large number of promising varieties that are developed and commercialized every year. But while researchers can currently use open source tools to predict fairly accurately the productivity in a given environment of the genetics of two germplasm when creating a new hybrid, no such tool exists to allow a farmer to compare how commercially available variants would perform in his local climatic conditions.
+
+Typically, large scale fields trials are conducted at the regional level through the cooperative efforts of farmer associations, universities, seed growers, governmental agencies, and others. These regional consortiums or organisations typically conduct performance trials for hundreds of varieties in multiples test sites, to account for varying local environmental conditions. They tend to publish their results for free, but usually in a PDF format.
 
 ## Design thinking path
 ![ESSPERA-Design thinking-extract](https://user-images.githubusercontent.com/65171375/198857424-071d6e36-fc22-4eef-b260-990eb92aefb8.jpg)
